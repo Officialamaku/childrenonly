@@ -4,65 +4,175 @@
     box-sizing: border-box;
 }
 
-.header {
-    background-color: rgba(239, 239, 22, 0.402);
+body {
+    font-family: 'poppins', sans-serif;
+    color: #222;
+    background: #f5f6fa;
+    line-height: 1.6;
 }
 
-.header img {
-    width: 70px;
-    border-radius: 50%;
-    object-fit: cover;
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.navigation {
-    background-color: aliceblue;
-    width: 100%;
-    height: 10vh;
+/* ===HEADER STARTS HERE===== */
+header {
+    background: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0);
 }
 
-.hero {
-    background-color:rgba(102, 51, 153, 0.221) ;
-    height: 50%;
-}
-
-.hero img {
-    width: 100%;
-    height: 50%;
-    object-fit: cover;
-}
-
-.newarrival {
-    font-size: 3rem;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #666;
-    text-align: center;
-}
-
-.newarrival_products {
-    width: 100%;
-    background-color: #000;
+.nav-bar{
     display: flex;
-    text-align: center;
     justify-content: space-around;
+    align-items: center;
 }
 
-.newarrival_products div{
-    width: 25%;
-    height: 110px;
-    border-radius: 15%;
-    color: black;
-    background-color: rgba(255, 166, 0, 0.927);
+.logo{
+    color: #555;
+    font-size: 1.4rem;
 }
 
-footer {
-    background-color: gray;
-    padding: 20px;
-    text-align: center;
-}
-
-.footer_div{
+nav ul {
+    list-style: none;
     display: flex;
+    gap: 1rem;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #333;
+    padding: 0.4rem 0.6rem;
+    border-radius: 5px;
+}
+
+.contact-btn{
+    background: #a259ff;
+    color: #fff;
+}
+
+/* ===HERO SECTION STARTS HERE */
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 0;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h2{
+    font-size: 2rem;
+    color: #333;
+}
+
+.say-hello{
+    margin-top: 1rem;
+    background: #a259ff;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero-image img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* ====STATS SECTION STARTS HERE */
+.stats{
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0;
     text-align: center;
-    justify-content: center; 
+}
+
+.stat {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    min-width: 100px;
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 0;
+}
+
+.about-img{
+position: relative;
+}
+
+.about-image img{
+    width: 200px;
+    border-radius: 10px;
+}
+
+.socials{
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.socials a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.about-text {
+    max-width: 60%;
+}
+
+.about-text h3{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.buttons {
+    margin-bottom: 1rem;
+}
+
+.project-btn,
+.cv-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    margin-left: 1rem;
+    border-radius: 5px;
+}
+
+.project-btn {
+    background: #a259ff;
+    color: white;
+}
+
+.cv-btn {
+    border: 1px solid #a259ff;
+}
+
+.work-process {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.process-step {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.step {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
 }
