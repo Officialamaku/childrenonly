@@ -1,0 +1,110 @@
+html{
+    scroll-behavior:smooth;
+    box-sizing:border-box;
+  }
+
+  *,*::before,*::after{box-sizing:inherit}
+
+  img,video{
+    max-width:100%;
+    height:auto;   /* ← no stretched pictures */
+    display:block;
+  }
+
+  section,header,footer{width:min(100%,1280px);margin-inline:auto;}
+
+  /* ────────────────────────────────────
+   2. Fluid type‑scale (clamps at 320‑1440 px)
+   ────────────────────────────────────*/
+:root{
+    --step-0:clamp(0.95rem,0.90rem+0.3vw,1.125rem);
+    --step-1:clamp(1.2rem ,1.05rem+0.8vw,1.75rem);
+    --step-2:clamp(1.44rem,1.25rem+1.2vw,2.5rem);
+    --step-3:clamp(1.73rem,1.46rem+1.8vw,3.25rem);
+  }
+
+  /* ────────────────────────────────────
+   2. Fluid type‑scale (clamps at 320‑1440 px)
+   ────────────────────────────────────*/
+:root{
+    --step-0:clamp(0.95rem,0.90rem+0.3vw,1.125rem);
+    --step-1:clamp(1.2rem ,1.05rem+0.8vw,1.75rem);
+    --step-2:clamp(1.44rem,1.25rem+1.2vw,2.5rem);
+    --step-3:clamp(1.73rem,1.46rem+1.8vw,3.25rem);
+  }
+
+  /* ────────────────────────────────────
+   3. Navigation
+   ────────────────────────────────────*/
+nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:1rem 1.25rem;gap:1rem;
+  }
+  nav ul{
+    display:flex;gap:2rem;list-style:none;
+  }
+
+  nav .hamburger{
+    display:none;cursor:pointer;font-size:1.8rem;border:none;background:transparent;
+  }
+
+  /* small screens → collapse menu */
+@media (max-width:768px){
+    nav ul{
+      position:fixed;inset:0 0 auto 0;     /* full‑width bar on top */
+      flex-direction:column;gap:1.5rem;
+      background:#000;                     /* tweak to taste */
+      padding:5rem 1.5rem;translate:0 -100%;
+      transition:translate .35s ease-in-out;
+    }
+    nav ul.open{translate:0 0;}            /* toggled by JS */
+    nav .hamburger{display:block}
+  }
+  
+  /* ────────────────────────────────────
+   4. Hero split‑layout
+   ────────────────────────────────────*/
+.hero{
+    display:grid;gap:2rem;align-items:center;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    padding:clamp(3rem,5vw,6rem) 1rem;
+  }
+  
+  /* statistics row (15Y / 250+ / …) */
+.stats{
+    display:flex;flex-wrap:wrap;gap:2rem;
+  }
+  .stats div{flex:1 1 100px;text-align:center}
+  
+
+  /* ────────────────────────────────────
+   5. Reusable masonry‑ish grids
+   ────────────────────────────────────*/
+.portfolio-grid,
+.blog-grid,          /* you called it .blog-gird in the markup – update either CSS or HTML */
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.75rem;
+  place-items:start;
+}
+
+/* ensure the project card stretches full height so buttons sit flush */
+.portfolio-item{display:flex;flex-direction:column}
+.portfolio-item img{flex:0 0 auto;border-radius:.5rem}
+.portfolio-item .portfolio-text{flex:1 1 auto;padding:1rem}
+
+/* ────────────────────────────────────
+   8. Quick “safe‑area” media tweaks
+   ────────────────────────────────────*/
+   @media (min-width:1600px){
+    .hero{grid-template-columns:1fr 1fr;max-width:1440px}
+  }
+  /* add more breakpoints only if needed – the auto‑fit/grid handles most */
+  
+  /* ────────────────────────────────────
+     9. Reduce excessive motion for folks who prefer it
+     ────────────────────────────────────*/
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important}
+  }

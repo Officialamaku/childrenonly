@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="responsive.css">
     <title>My Portfolio</title>
 </head>
 <body>
@@ -295,22 +296,12 @@
     </div>
     <h6>Copyrigt ©Amaku 2022 Picto.</h6>
   </footer>
-<!-- 
 
- nav bar
-    <nav>
-        <ul class="navbar">
-            <li><a href="#"></a>Home</li>
-            <li><a href="#"></a>About</li>
-            <li><a href="#"></a>Process</li>
-            <li><a href="#"></a>Portfolio</li>
-            <li><a href="#"></a>Blog</li>
-            <li><a href="#"></a>Services</li>
-        </ul>
-    </nav>
-    <h6>Copyrigt © 2022 Picto.</h6>
-</footer> -->
-    
+  <script>
+    document.querySelector('.hamburger').addEventListener('click',()=>{
+      document.querySelector('nav ul').classList.toggle('open');
+    });
+    </script>
     
 </body>
 </html>
