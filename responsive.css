@@ -64,16 +64,6 @@ nav .hamburger{
 .header .logo{text-align: center; justify-content: center;}
 .hero img{ width: 150px;position: relative; padding: 20px 0x; margin-left: 50px;}
 
-  /* ────────────────────────────────────
-   4. Hero split‑layout
-   ────────────────────────────────────*/
-/* .hero{
-    display:grid;gap:2rem;align-items:center;
-    grid-template-columns:repeat(auto-fit,minmax(320px 1fr));
-    padding:clamp(3rem,5vw,6rem) 1rem;
-    border: 1px solid;
-    border-radius: 20px 0 20px 0 ;} */
-
     .hero {
       display: flex;
       flex-wrap: wrap;                  /* Allow items to wrap on smaller screens */
@@ -95,12 +85,18 @@ nav .hamburger{
 .seperate{ width: 40%;}
 .seperate h3{ padding: 0 6px;}
 .seperate p{width: 100%; padding: 0 20px;}
-.process-steps{position: relative; left: 10px; font-size: 15px; width: 50%; height: auto; border-radius: 100px 0 30px 300px;}
+.process-steps{
+  position: relative; 
+  left: 10px; 
+  font-size: 15px; 
+  width: 50%; 
+  height: auto; 
+  border-radius: 100px 0 30px 300px;}
 .step{ width: 100%; height: 20vh;}
 .step p{width: 100%; font-size: 10px;}
 
-.portfolio-item { width: 40%; justify-content: center; text-align: center; font-size: 13px;}
-.portfolio-grid{grid-template-columns: 1fr 1fr; text-align: center;}
+.portfolio-item {justify-content: center; text-align: center; font-size: 13px;}
+.portfolio-grid{grid-template-columns: 1fr; text-align: center;}
 .case-btn{padding: 10px; font-size: 12px;}
 /* BLOG SECTION */
 .blog-section{width: 100%;}
@@ -115,14 +111,7 @@ nav .hamburger{
 .stats{display:flex;flex-wrap:wrap;gap:2rem;}
 .stats div{flex:1 1 100px;text-align:center; font-size: 12px;}
 
-/* ensure the project card stretches full height so buttons sit flush */
-.portfolio-item{display:flex;flex-direction:column}
-.portfolio-item img{flex:0 0 auto;border-radius:.5rem}
-.portfolio-item .portfolio-text{flex:1 1 auto;padding:1rem}
-
-/* ────────────────────────────────────
-   7. Contact / footer
-   ────────────────────────────────────*/
+/* ─── Contact / footer ──────────*/
    footer{
     display:grid;gap:2rem;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
@@ -135,6 +124,12 @@ nav .hamburger{
     width:100%;padding:.75rem 1rem;border-radius:.5rem;border:1px solid #666;background:#1c1c1c;color:#fff;
   }
   
+}
+
+@media (min-width:330px){
+  .portfolio-item { width: 45%; justify-content: center; text-align: center; font-size: 13px;}
+.portfolio-grid{grid-template-columns: 1fr 1fr; text-align: center;}
+.case-btn{padding: 10px; font-size: 12px;}
 }
 
 
