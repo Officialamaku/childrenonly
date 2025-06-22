@@ -245,8 +245,7 @@ section {
 .portfolio-grid{
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    /* justify-content: center; */
+    gap: 10px;    
     margin-top: 40px;
 }
 
@@ -369,7 +368,7 @@ section {
 }
 
 .yello{
-    color: yellow;
+    color: orange;
 }
 .green{
     color: green;
@@ -378,7 +377,7 @@ section {
     color: blue;
 }
 .red{
-    color: tomato;
+    color: red;
 }
 
 /* Contact Section */
